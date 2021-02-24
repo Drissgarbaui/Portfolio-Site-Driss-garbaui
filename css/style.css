@@ -1,0 +1,767 @@
+
+
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FFFFFF;
+	font-family: 'EB Garamond', serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #262626;
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Signika Negative', sans-serif;
+	line-height: 1.4;
+}
+
+h1 {
+  font-size: 2.75em;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.80em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.60em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+.container {
+	padding: 0 15px;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[FADE-IN ANIMATIONS]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------- [WORK PAGE] ------------------ */
+
+#hero h1 {
+	animation-name: fadeIn;
+	animation-duration: 0.6s;
+	animation-timing-function: ease-out;
+}
+
+#hero p {
+	animation-name: fadeIn;
+	animation-duration: 0.8s;
+	animation-timing-function: ease-out;
+}
+
+#work {
+	animation-name: fadeIn;
+	animation-duration: 1.4s;
+	animation-timing-function: ease-out;
+}
+
+/* ----------------- [ABOUT PAGE] ------------------ */
+
+.about-image {
+	animation-name: fadeIn;
+	animation-duration: 0.6s;
+	animation-timing-function: ease-out;
+}
+
+.about-bio h1 {
+	animation-name: fadeIn;
+	animation-duration: 1.0s;
+	animation-timing-function: ease-out;
+}
+
+.about-bio p {
+	animation-name: fadeIn;
+	animation-duration: 1.2s;
+	animation-timing-function: ease-out;
+}
+
+.about-skills {
+	animation-name: fadeIn;
+	animation-duration: 1.4s;
+	animation-timing-function: ease-out;
+}
+
+.about-lists {
+	animation-name: fadeIn;
+	animation-duration: 1.6s;
+	animation-timing-function: ease-out;
+}
+
+.about-cv {
+	animation-name: fadeIn;
+	animation-duration: 1.8s;
+	animation-timing-function: ease-out;
+}
+
+/* ----------------- [ANIMATION] ------------------ */
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(400px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[IMAGE STYLING]
+
+- max-width: 100%; Images cannot scale up larger than their original size
+- Reduced size of Profile Image on About Page
+- Certain images span the entire width of the page
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.fullimage {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+}
+
+.fullimage.flash {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 100%;
+	margin: 0;
+}
+
+.centerimage {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	max-width: 100%;
+}
+
+.centerimage.flash-persona {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	width: 80%;
+	margin: auto;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[LINK STYLING]
+
+- Changed color of in-text links and removed default underline
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+a {
+  color: #24313D;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #758598;
+  text-decoration: underline;
+}
+
+a:visited, a:active {
+  color: #586B7C;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[BUTTON STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.button {
+  display: inline-block;
+  border:none;
+  background-color: #262626;
+  color: #FFFDF9;
+  font-family: 'Signika Negative', sans-serif;
+  font-weight: 700;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 2px 2px;
+  border-radius: 50px;
+  transition: 0.4s;
+}
+
+.button:hover, active, focus {
+	color: #FFFDF9;
+	opacity: 0.8;
+	text-decoration: none;
+	transition: 0.4s;
+}
+
+.button:visited {
+   color: #FFFDF9;
+   text-decoration: none;
+}
+
+.about-cv a {
+	margin: 20px 0px;
+	text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[HERO STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#hero {
+	display: block;
+	width: 80%;
+	margin: 50px auto;
+}
+
+#hero h1 {
+	text-align: left;
+	font-size: 80px;
+	margin-bottom: 0px;
+	margin: 0;
+}
+
+#hero p {
+	font-family: 'EB Garamond', serif;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 0px;
+}
+
+@media only screen and (min-width: 1024px) {
+
+	#hero {
+	display: block;
+	width: 60%;
+	margin: 200px auto;
+	}
+
+	#hero h1 {
+	text-align: left;
+	font-size: 110px;
+	margin-bottom: 0px;
+	margin: 0;
+	}
+
+	#hero p {
+	font-family: 'EB Garamond', serif;
+	font-size: 26px;
+	font-weight: 400;
+	line-height: 1.6;
+	margin-top: 0px;
+}
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[HEADER & NAVIGATION BAR STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ----------------- [LOGO STYLING] ------------------ */
+
+.logo {
+	width: 15%;
+	transition: 0.3s ease-in;
+	margin: 30px;
+}
+
+.logo:hover {
+	opacity: 0.8;
+	transition: 0.3s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+	.logo {
+		width: 9%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.logo {
+		width: 5%;
+	}
+}
+
+/* ----------------- [GENERAL NAV STYLING] ------------------ */
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 8vh;
+
+	font-family: 'Signika Negative', sans-serif;
+  	font-weight: 700;
+  	font-size: 16px;
+}
+
+nav.vela {
+	background-color: #24313D;
+}
+
+nav.flash {
+	background-color: #37475A;
+}
+
+/* ----------------- [NAV LINKS STYLING] ------------------ */
+
+.nav-links {
+	display: flex;
+	justify-content: space-around;
+	width: 25%;
+}
+
+@media screen and (max-width:1440px){
+	.nav-links {
+	width: 35%;
+	}
+}
+
+@media screen and (max-width:1024px){
+	.nav-links {
+	width: 45%;
+	}
+}
+
+.nav-links li {
+	list-style: none;
+}
+
+.nav-links a {
+	color: #8C8C8C;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	transition: 0.2s ease-in;
+}
+
+.nav-links a:hover, a:focus, a:active {
+	color: #262626;
+	transition: 0.2s ease-in;
+}
+
+a.active {
+	color: #262626;
+}
+
+ul.nav-links {
+	padding: 0;
+}
+
+/* ----------------- [NAV LINKS - ANGE STYLING] ------------------ */
+
+.nav-links.vela {
+	background-color: #24313D;
+}
+
+.nav-links.vela a {
+	color: #758598;
+}
+
+.nav-links.vela a:hover, a:focus, a:active {
+	color: #89E3FF;
+}
+
+/* ----------------- [NAV LINKS - NORA STYLING] ------------------ */
+
+.nav-links.flash {
+	background-color: #37475A;
+}
+
+.nav-links.flash a {
+	color: #8D98AA;
+}
+
+.nav-links.flash a:hover, a:focus, a:active {
+	color: #F9EA3B;
+}
+
+/* ----------------- [HAMBURGER MENU STYLING] ------------------ */
+
+.burger {
+	display: none;
+	cursor: pointer;
+	padding: 30px;
+}
+
+.burger div {
+	width: 30px;
+	height: 4px;
+	background-color: #262626;
+	margin: 6px;
+	transition: all 0.3s ease;
+}
+
+.burger.vela div {
+	background-color: #89E3FF;
+}
+
+.burger.flash div {
+	background-color: #F9EA3B;
+}
+
+/* ----------------- [NAV LINKS HAMBURGER ANIMATIONS] ------------------ */
+
+@media screen and (max-width:768px){
+
+	.nav-links {
+		position: absolute;
+		height: 80vh;
+		top: 20vh;
+		background-color: #FFFDF9;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		transform: translateX(100%);
+		transition: transform 0.2s ease-in;
+	}
+
+	.burger {
+		display: block;
+	}
+
+}
+
+.nav-active {
+	transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+	from {
+		opacity: 0;
+		transform: translateX(150px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.toggle .line1 {
+	transform: rotate(-135deg) translate(-9px, -6px);
+}
+
+.toggle .line2 {
+	opacity: 0;
+}
+
+.toggle .line3 {
+	transform: rotate(+135deg) translate(-8px, 6px);
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[FOOTER STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.bar {
+	background-color: #262626;
+	height: 60px;
+	width: 100%;
+	margin: 100px 0px 50px 0px;
+}
+
+.bar.flash {
+	margin: 0;
+}
+
+.chat {
+	font-family: 'EB Garamond', serif;
+	font-size: 28px;
+	font-weight: 700;
+	text-align: center;
+	margin: 30px;
+}
+
+.message {
+	display: flex;
+	justify-content: center;
+	margin: 30px;
+}
+
+.message a {
+	color: #FFFDF9;
+	text-decoration: none;
+}
+
+.social {
+	display: flex;
+	justify-content: center;
+}
+
+.social > a {
+	margin: 15px;
+}
+
+.iconhover {
+	transition: 0.4s;
+}
+
+.iconhover:hover {
+	transition: 0.4s;
+	opacity: 0.8;
+}
+
+.copyright {
+	font-size: 16px;
+	margin: 0px 15px 15px 15px; /* Top, Right, Bottom, Left */
+}
+
+#btnScrollToTop {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+
+	width: 90px;
+	height: 90px;
+
+	border: none;
+	background: none;
+	outline: none;
+
+	cursor: pointer;
+
+	display: none;
+}
+
+#btnScrollToTop:hover {
+	opacity: 0.8;
+	transition: 0.4s;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[ABOUT PAGE STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.about {
+	display: block;
+	width: 80%;
+	margin: 50px auto;
+}
+
+.about-bio > h1 {
+	font-size: 2em;
+}
+
+.quote {
+	font-size: 1.5em;
+	color: #A0A0A0;
+}
+
+.about-skills > h2 {
+	color: #A0A0A0;
+}
+
+@media only screen and (min-width: 1024px) {
+
+	.about {
+		display: flex;
+		width: 90%;
+		margin: 100px auto 0px auto;
+		justify-content: space-between;
+	}
+
+	.about-bio > h1 {
+	font-size: 2.75em;
+	}
+
+	.about-image {
+		width: 20%;
+	}
+
+	.about-bio {
+		width: 55%;
+	}
+
+	.about-skills {
+		width: 15%;
+	}
+
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[PROJECT-OVERVIEW STYLING]
+
+- Media query to activate flexbox only when viewport width > 768px, otherwise default to block display
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.layout-overview {
+	display: block;
+	width: 70%;
+	margin: 80px auto;
+}
+
+.accent-overview {
+	background-color: #24313D;
+	height: auto;
+	color: #FFFDF9;
+	padding: 15px;
+}
+
+.accent-overview-flash {
+	background-color: #37475A;
+	height: auto;
+	color: #FFFDF9;
+	padding: 15px;
+}
+
+.role > h4 {
+	font-family: 'EB Garamond', serif;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 0;
+}
+
+.date {
+	font-family: 'EB Garamond', serif;
+	font-weight: 400;
+	font-style: italic;
+	font-size: 18px;
+}
+
+.process {
+	display: block;
+	width: 70%;
+	margin: 0px auto 120px auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.project {
+			display: flex;
+			width: 60%;
+			margin: 100px auto 0px auto;
+	}
+
+	.overview {
+		flex: 2;
+		padding-right: 80px;
+	}
+
+	.role {
+		flex: 0 0 250px;
+	}
+
+	.role > h4 {
+		font-family: 'EB Garamond', serif;
+		font-weight: 700;
+		font-size: 22px;
+		line-height: 0;
+	}
+
+	.date {
+		font-family: 'EB Garamond', serif;
+		font-weight: 400;
+		font-style: italic;
+		font-size: 18px;
+	}
+
+	.process {
+		display: block;
+		width: 60%;
+		margin: 0px auto 120px auto;
+	}
+
+	.accent-overview {
+		background-color: #24313D;
+		height: auto;
+		color: #FFFDF9;
+		padding: 5px 0px;
+		margin: 80px 0px;
+	}
+
+	.accent-overview-flash {
+		background-color: #37475A;
+		height: auto;
+		color: #FFFDF9;
+		padding: 5px 0px;
+		margin: 80px 0px;
+	}
+
+}
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[PROJECT-BODY STYLING]
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.vela-bg-gray {
+	background-color: #EFEFEF;
+	height: auto;
+	padding: 20px 0px 80px 0px;
+	margin: 80px 0px 80px 0px;
+}
+
+.accent {
+	background-color: #24313D;
+}
+
+.layout {
+	display: block;
+	width: 70%;
+	margin: 80px auto;
+}
+
+@media only screen and (min-width: 768px) {
+	.layout {
+	display: block;
+	width: 60%;
+	margin: 80px auto;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.layout {
+	display: block;
+	width: 50%;
+	margin: 80px auto;
+	}
+}
+
+@media only screen and (min-width: 1440px) {
+	.layout {
+	display: block;
+	width: 40%;
+	margin: 80px auto;
+	}
+}
